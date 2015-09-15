@@ -36,5 +36,10 @@ describe Array do
         acc.length > word.length ? acc : word
       end).to eq('crocodile')
     end
+
+    it 'supports passing a symbol as an operation' do
+      expect(array.sandwich_in(:+)).to eq(10)
+    end
+
   end
 end
